@@ -1,8 +1,8 @@
 #!/usr/bin/env puma
 
 # rails environment
-environment 'production'
-port 3000
+environment ENV['RACK_ENV'] || 'production'
+port ENV['PORT'] || 3000
 threads 0, 16
 workers 1
 
