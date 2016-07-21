@@ -1,0 +1,17 @@
+<h1>Listing Records</h1>
+<%= link_to 'New Record', baby_new_path %>
+<table class="table table-striped">
+	<tr>
+		<th>Date</th>
+		<th>Record Time</th>
+		<th>Capacity</th>
+	</tr>
+
+	<% @babyrecords.each do |record| %>
+		<tr>
+			<td><%= record.datetime %></td>
+			<td><%= record.record_time %></td>
+			<td><%= record.capacity %></td>
+		</tr>
+	<% end %>
+</table>

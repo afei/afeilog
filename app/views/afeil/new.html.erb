@@ -1,0 +1,47 @@
+<%= form_for :babyrecord do |f| %>
+	<% if @babyrecord.errors.any? %>
+		<div id="error_explanation">
+			<h2>
+				<%= pluralize(@babyrecord.errors.count, "error") %>
+				prohibited this article form being saved:
+			</h2>
+			<ul>
+				<% @babyrecord.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<fieldset class="form-horizontal">
+
+	<div class="form-group">
+	<%= f.label :datetime, class: "col-sm-2 control-label" %>
+	<div class="col-sm-4">
+	<%= f.date_field :datetime, class: "form-control" %>
+	</div>
+	</div>
+
+	<div class="form-group">
+	<%= f.label :recorc_time, class: "col-sm-2 control-label" %>
+	<div class="col-sm-4">
+	<%= f.time_field :record_time, class: "form-control" %>
+	</div>
+	</div>
+
+	<div class="form-group">
+	<%= f.label :capacity, class: "col-sm-2 control-label" %>
+	<div class="col-sm-4">
+	<%= f.number_field :capacity, class: "form-control" %>
+	</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-4">
+	  <%= f.submit class: "btn btn-default"%>
+		</div>
+	</div>
+
+	</fieldset>
+<% end %>
+	
