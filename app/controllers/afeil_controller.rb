@@ -6,7 +6,7 @@ class AfeilController < ApplicationController
 	end
 	
 	def qbaby
-		@babyrecords = BabyRecord.all
+		@babyrecords = BabyRecord.order(datetime: :desc, record_time: :desc)
 	end
 
 	def new
