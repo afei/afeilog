@@ -6,12 +6,15 @@ class AfeilController < ApplicationController
 	end
 	
 	def qbaby
-		@babyrecords = BabyRecord.order(datetime: :desc, record_time: :desc)
+		#@babyrecords = BabyRecord.order(datetime: :desc, record_time: :desc)
+		date = Time.now.localtime
+		logger.info date
+
+		@babyrecords = BabyRecord.where( ["datetime > ? AND datetime < ?", date.beginning_of_day.utc, date.end_of_day.utc])
 	end
 
 	def new
 		@babyrecord = BabyRecord.new
-	  #@babyrecord.datetime = Time.now.strftime("%Y-%m-%d %H:%M")
 		@babyrecord.datetime = Time.now
 		@babyrecord.record_time = Time.now.strftime("%H:%M")
 	end

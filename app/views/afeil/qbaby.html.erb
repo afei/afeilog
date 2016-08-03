@@ -9,9 +9,11 @@
 
 	<% @babyrecords.each do |record| %>
 		<tr>
-			<td><%= record.datetime.strftime("%Y-%m-%d") if !record.datetime.nil? %></td>
+			<td><%= record.datetime.localtime.strftime("%Y-%m-%d") if !record.datetime.nil? %></td>
 			<td><%= record.record_time.strftime("%H:%M") if !record.record_time.nil? %></td>
 			<td><%= record.capacity %></td>
 		</tr>
 	<% end %>
 </table>
+
+
