@@ -7,10 +7,8 @@ class AfeilController < ApplicationController
 	
 	def qbaby
 		#@babyrecords = BabyRecord.order(datetime: :desc, record_time: :desc)
-		date = Time.now.localtime
-		logger.info date
-
-		@babyrecords = BabyRecord.where( ["datetime > ? AND datetime < ?", date.beginning_of_day.utc, date.end_of_day.utc])
+		date = Time.now
+		@babyrecords = BabyRecord.where( ["datetime BETWEEN ? AND ?", ( date - 3.days ).beginning_of_day.utc, date.end_of_day.utc]).order( datetime: :desc, record_time: :desc)
 	end
 
 	def new
