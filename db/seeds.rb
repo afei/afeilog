@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+items = ListItem.create([{ id: 1, itemtype: 'babyrecord', itemname: 'Milk' },
+												 { id: 2, itemtype: 'babyrecord', itemname: 'Faeces' }])
+
