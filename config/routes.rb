@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'ichr/index'
+
   get 'qbaby/index'
 
   get 'qbaby/new'
