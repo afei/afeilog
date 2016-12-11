@@ -1,15 +1,42 @@
 // Place all the styles related to the ichr controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-bady {
-	padding-top: 88px;
-	padding-bottom: 50px;
+html {
+	position: relative;
+	min-height: 100%;
+	body{
+		margin-bottom: 60px;
+		.footer{
+			height: 60px;
+			background-color: #f8f8f8;
+			vertical-align: middle;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			.footer_img{
+				padding-top: 5px;
+				padding-right: 15px;
+				height: 40px;
+				background-size: cover;
+				float: left;
+			}
+			span{
+			}
+		}
+	}
 }
 
-.bodyContent{
-	margin-top: 88px;
-	margin-bottom: 50px;
+body > .container {
+	padding: 60px 15px 0;
+}
+
+.container .text-muted {
+	margin: 20px 0;
+}
+
+.footer > .container {
+	padding-right: 15px;
+	padding-left: 15px;
 }
 
 .navbar{
@@ -51,18 +78,5 @@ bady {
 	background-image: url(asset-path('payhistory.png'))
 }
 
-.footer{
-	height: 50px;
-	background-color: #f8f8f8;
-	.footer_img{
-		padding-top: 5px;
-		padding-right: 15px;
-		height: 40px;
-		background-size: cover;
-		vertical-align: middle;
-		float: left;
-	}
-	span{
-		vertical-align: middle;
-	}
-}
+
+

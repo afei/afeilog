@@ -10,8 +10,9 @@
 </head>
 <body> 
 	<%= render 'layouts/navbar' %>
-  <div class="container bodyContent">
+  <div id="container" class="container bodyContent">
   <%= yield %>
+	<div class="push"></div>
   </div>
 	<%= render 'layouts/footer' %>
 </body>
