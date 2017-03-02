@@ -1,19 +1,16 @@
 Rails.application.routes.draw do
   get 'ichr/index'
-
   get 'qbaby/index'
-
   get 'qbaby/new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   get 'afeil/html5' => 'afeil#html5'
-	get 'afeil/index' => 'afeil#index'
-
-	get 'baby/new' => 'afeil#new'
-	post 'baby/new' => 'afeil#create'
-	get 'baby/index' => 'afeil#qbaby'
+  get 'afeil/index' => 'afeil#index'
+  get 'baby/new' => 'afeil#new'
+  post 'baby/new' => 'afeil#create'
+  get 'baby/index' => 'afeil#qbaby'
 
   # You can have the root of your site routed with "root"
   root 'afeil#index'
