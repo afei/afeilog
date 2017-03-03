@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  device_code: MyString
+  serial_no: MyString
+  model_no: MyString
+  manufacturer: MyString
+  first_use_date: 2017-03-03
+  verify_date: 2017-03-03
+  company_id: 
+
+two:
+  device_code: MyString
+  serial_no: MyString
+  model_no: MyString
+  manufacturer: MyString
+  first_use_date: 2017-03-03
+  verify_date: 2017-03-03
+  company_id: 

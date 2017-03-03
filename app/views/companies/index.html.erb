@@ -1,0 +1,40 @@
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
+
+<h1>Listing Companies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Area</th>
+      <th>Address</th>
+      <th>Contacter</th>
+      <th>Contact number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @companies.each do |company| %>
+      <tr>
+        <td><%= company.code %></td>
+        <td><%= company.name %></td>
+        <td><%= company.area %></td>
+        <td><%= company.address %></td>
+        <td><%= company.contacter %></td>
+        <td><%= company.contact_number %></td>
+        <td><%= link_to 'Show', company %></td>
+        <td><%= link_to 'Edit', edit_company_path(company) %></td>
+        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Company', new_company_path %>

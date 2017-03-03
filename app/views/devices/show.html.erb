@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Device code:</strong>
+  <%= @device.device_code %>
+</p>
+
+<p>
+  <strong>Serial no:</strong>
+  <%= @device.serial_no %>
+</p>
+
+<p>
+  <strong>Model no:</strong>
+  <%= @device.model_no %>
+</p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @device.manufacturer %>
+</p>
+
+<p>
+  <strong>First use date:</strong>
+  <%= @device.first_use_date %>
+</p>
+
+<p>
+  <strong>Verify date:</strong>
+  <%= @device.verify_date %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @device.company %>
+</p>
+
+<%= link_to 'Edit', edit_device_path(@device) %> |
+<%= link_to 'Back', devices_path %>
