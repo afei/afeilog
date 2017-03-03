@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :devices
+  resources :companies
   get 'ichr/index'
   get 'qbaby/index'
   get 'qbaby/new'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160814141030) do
+ActiveRecord::Schema.define(version: 20170303082812) do
 
   create_table "baby_records", force: :cascade do |t|
     t.datetime "datetime"
@@ -20,6 +20,31 @@ ActiveRecord::Schema.define(version: 20160814141030) do
     t.datetime "updated_at",  null: false
     t.time     "record_time"
   end
+
+  create_table "companies", force: :cascade do |t|
+    t.string   "code"
+    t.string   "name"
+    t.string   "area"
+    t.string   "address"
+    t.string   "contacter"
+    t.string   "contact_number"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "devices", force: :cascade do |t|
+    t.string   "device_code",    null: false
+    t.string   "serial_no"
+    t.string   "model_no"
+    t.string   "manufacturer"
+    t.date     "first_use_date"
+    t.date     "verify_date"
+    t.integer  "company_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "devices", ["company_id"], name: "index_devices_on_company_id"
 
   create_table "list_items", force: :cascade do |t|
     t.string   "itemtype"
