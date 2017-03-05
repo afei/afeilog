@@ -24,7 +24,9 @@ class DevicesController < ApplicationController
   # POST /devices
   # POST /devices.json
   def create
-    @device = Device.new(device_params)
+    @company = Company.find( device_params[:company_id])
+    @device = @company.devices.build( device_params)
+#    logger.error( @device.company_id + device_params[:company_id] )
 
     respond_to do |format|
       if @device.save
