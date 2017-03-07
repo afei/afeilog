@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'lifts/index'
+
   resources :devices
   resources :companies
   get 'ichr/index'

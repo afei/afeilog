@@ -36,8 +36,8 @@
     <%= f.date_select :verify_date %>
   </div>
   <div class="field">
-    <%= f.label :company_id %><br>
-    <%= f.text_field :company_id %>
+    <%= f.label :company_code %><br>
+		<%= f.select :company_code, Company.all.collect {|c| [c.name, c.code]}, prompt: 'Select a company' %>
   </div>
   <div class="actions">
     <%= f.submit %>

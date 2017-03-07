@@ -1,0 +1,37 @@
+<div class="panel panel-default">
+	<div class="panel-heading"><%= company.name %></div>
+	<div class="panel-body">
+		<div class="form-horizontal">
+			<div class="form-group form-group-sm">
+				<span class="col-sm-2">Code</span>
+				<span class="col-sm-4"><%= company.code %></span>
+				<span class="col-sm-2">Area</span>
+				<span class="col-sm-4"><%= company.area %></span>
+			</div>
+			<div class="form-group form-group-sm">
+				<span class="col-sm-2">Contacter</span>
+				<span class="col-sm-4"><%= company.contacter %></span>
+				<span class="col-sm-2">Contact Number</span>
+				<span class="col-sm-4"><%= company.contact_number %></span>
+			</div>
+			<div class="form-group form-group-sm">
+				<span class="col-sm-2">Address</span>
+				<span class="col-sm-4"><%= company.address %></span>
+				<span class="col-sm-2">Device Count</span>
+				<span class="col-sm-4"><%= company.devices.count %></span>
+			</div>
+		</div>
+	</div>
+	<% if !company.devices.blank?  %>
+		<table class="table">
+			<th>Code</th>
+			<th>Serial No</th>
+			<th>Model No</th>
+			<th>Manufacturer</th>
+			<th>First Use Date</th>
+			<th>Verify Date</th>
+			<th></th>
+			<%= render company.devices %>
+		</table>
+	<% end %>
+</div>

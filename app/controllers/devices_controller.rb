@@ -1,5 +1,6 @@
 class DevicesController < ApplicationController
   before_action :set_device, only: [:show, :edit, :update, :destroy]
+	layout "lifts"
 
   # GET /devices
   # GET /devices.json
@@ -24,9 +25,9 @@ class DevicesController < ApplicationController
   # POST /devices
   # POST /devices.json
   def create
-    @company = Company.find( device_params[:company_id])
+    @company = Company.find_by(code: device_params[:company_code])
     @device = @company.devices.build( device_params)
-#    logger.error( @device.company_id + device_params[:company_id] )
+		@device.company_id = @company.id
 
     respond_to do |format|
       if @device.save
@@ -71,6 +72,6 @@ class DevicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def device_params
-      params.require(:device).permit(:device_code, :serial_no, :model_no, :manufacturer, :first_use_date, :verify_date, :company_id)
+      params.require(:device).permit(:device_code, :serial_no, :model_no, :manufacturer, :first_use_date, :verify_date, :company_code)
     end
 end

@@ -21,11 +21,11 @@
   </div>
   <div class="field">
     <%= f.label :area %><br>
-    <%= f.text_field :area %>
+		<%= f.select :area, Company::AREAS, prompt: 'Select an area'  %>
   </div>
   <div class="field">
     <%= f.label :address %><br>
-    <%= f.text_field :address %>
+    <%= f.text_area :address %>
   </div>
   <div class="field">
     <%= f.label :contacter %><br>
