@@ -1,4 +1,4 @@
-<%= form_for(@device) do |f| %>
+<%= form_for(@device, html:{class: "form-horizontal"}) do |f| %>
   <% if @device.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@device.errors.count, "error") %> prohibited this device from being saved:</h2>
@@ -11,35 +11,51 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :device_code %><br>
-    <%= f.text_field :device_code %>
+  <div class="form-group">
+    <%= f.label :device_code, class: "col-sm-2 control-label" %>
+		<div class="col-sm-4">
+    <%= f.text_field :device_code, class:"form-control" %>
+		</div>
   </div>
-  <div class="field">
-    <%= f.label :serial_no %><br>
-    <%= f.text_field :serial_no %>
+  <div class="form-group">
+    <%= f.label :serial_no, class: "col-sm-2 control-label" %>
+		<div class="col-sm-4">
+    <%= f.text_field :serial_no, class:"form-control" %>
+		</div>
   </div>
-  <div class="field">
-    <%= f.label :model_no %><br>
-    <%= f.text_field :model_no %>
+  <div class="form-group">
+    <%= f.label :model_no, class: "col-sm-2 control-label" %>
+		<div class="col-sm-4">
+    <%= f.text_field :model_no, class:"form-control" %>
+		</div>
   </div>
-  <div class="field">
-    <%= f.label :manufacturer %><br>
-    <%= f.text_field :manufacturer %>
+  <div class="form-group">
+    <%= f.label :manufacturer, class: "col-sm-2 control-label" %>
+		<div class="col-sm-4">
+    <%= f.text_field :manufacturer, class:"form-control" %>
+		</div>
   </div>
-  <div class="field">
-    <%= f.label :first_use_date %><br>
-    <%= f.date_select :first_use_date %>
+  <div class="form-group">
+    <%= f.label :first_use_date, class: "col-sm-2 control-label" %>
+		<div class="col-sm-4">
+    <%= f.date_select :first_use_date, class:"form-control" %>
+		</div>
   </div>
-  <div class="field">
-    <%= f.label :verify_date %><br>
-    <%= f.date_select :verify_date %>
+  <div class="form-group">
+    <%= f.label :verify_date, class: "col-sm-2 control-label" %>
+		<div class="col-sm-4">
+    <%= f.date_select :verify_date, class:"form-control" %>
+		</div>
   </div>
-  <div class="field">
-    <%= f.label :company_code %><br>
-		<%= f.select :company_code, Company.all.collect {|c| [c.name, c.code]}, prompt: 'Select a company' %>
+  <div class="form-group">
+    <%= f.label :company_code, class: "col-sm-2 control-label" %>
+		<div class="col-sm-4">
+		<%= f.select :company_code, Company.all.collect {|c| [c.name, c.code]}, { prompt: 'Select a company' }, { class:"form-control" } %>
+		</div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+		<div class="col-sm-offset-2 col-sm-4">
+    <%= f.submit nil, class: "btn btn-default" %>
+		</div>
   </div>
 <% end %>
