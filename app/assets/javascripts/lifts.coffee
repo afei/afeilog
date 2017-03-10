@@ -3,4 +3,6 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ ->
-  $('.datepicker').datepicker();
+  $('.monthpicker').datepicker({ startView: 1, minViewMode: 1, autoclose: true, format: "yyyy-mm-dd" });
+  $('.datepicker').datepicker({ startView: 1, minViewMode: 0, autoclose: true, format: "yyyy-mm-dd" });
+

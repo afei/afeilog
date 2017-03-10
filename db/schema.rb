@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170307031748) do
+ActiveRecord::Schema.define(version: 20170310112418) do
 
   create_table "baby_records", force: :cascade do |t|
     t.datetime "datetime"
@@ -52,6 +52,13 @@ ActiveRecord::Schema.define(version: 20170307031748) do
     t.string   "itemname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end

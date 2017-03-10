@@ -5,7 +5,12 @@ class DevicesController < ApplicationController
   # GET /devices
   # GET /devices.json
   def index
-    @devices = Device.all
+		if params[:search].present?
+			verify_date = Date.parse params[:search]
+			@devices = Device.expired( verify_date ) 
+		else
+			@devices = Device.all
+		end
   end
 
   # GET /devices/1
