@@ -1,0 +1,73 @@
+zh:
+  layouts:
+    top:
+      title: "电梯记录系统"
+      company: "公司"
+      device: "设备"
+      contact: "合同"
+      logout: "注销"
+  sessions:
+    new:
+      name: "用户名:"
+      password: "密码:"
+      login: "登陆"
+  devices:
+    index:
+      search: "查询"
+      code: "设备注册代码"
+      serial_no: "出厂编号"
+      model_no: "型号及参数"
+      manufacturer: "制造厂家"
+      first_use_date: "投入使用时间"
+      verify_date: "定期检验时间"
+      company: "公司名称"
+      edit: "编辑"
+      destroy: "删除"
+      new_device: "新建"
+    form:
+      create_device: "创建设备"
+    new:
+      new_device: "新建设备"
+      back: "返回"
+    device:
+      edit: "编辑"
+
+  
+  companies:
+    company:
+      code: "公司编号"
+      area: "区域"
+      contacter: "联系人"
+      contact_number: "联系电话"
+      address: "地址"
+      device_count: "设备数量"
+
+      device_code: "设备注册代码"
+      serial_no: "出厂编号"
+      model_no: "型号及参数"
+      manufacturer: "制造厂家"
+      first_use_date: "投入使用时间"
+      verify_date: "定期检验时间"
+
+
+
+  activerecord:
+    models:
+      device: "设备"
+      company: "公司"
+    attributes:
+      device:
+        device_code: "设备注册代码"
+        serial_no: "出厂编号"
+        model_no: "型号及参数"
+        manufacturer: "制造厂家"
+        first_use_date: "投入使用时间"
+        verify_date: "定期检验时间"
+        company_code: "公司名称"
+      company:
+        code: "公司编号"
+        name: "公司名称"
+        area: "区域"
+        contacter: "联系人"
+        address: "地址"
+        contact_number: "联系电话"
