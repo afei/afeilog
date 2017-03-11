@@ -1,46 +1,50 @@
-<%= form_tag devices_path, method: :get, class: 'form-inline' do %>
-	<div class="form-group">
-		<%= text_field_tag :search, params[:search], {class: 'form-control monthpicker'} %>
-		<%= submit_tag 'Search', name: nil, class: 'btn btn-default' %>
+<% if notice %>
+	<div class="alert alert-warning alert-dismissible">
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<%= notice %>
 	</div>
 <% end %>
 
-<% if notice %>
-<p id="notice"><%= notice %></p>
+<%= form_tag devices_path, method: :get, class: 'form-inline' do %>
+	<div class="form-group">
+		<%= text_field_tag :search, params[:search], {class: 'form-control monthpicker'} %>
+		<%= submit_tag t('.search'), name: nil, class: 'btn btn-default' %>
+	</div>
 <% end %>
 
-
 <table class="table">
-  <thead>
-    <tr>
-      <th>Device code</th>
-      <th>Serial no</th>
-      <th>Model no</th>
-      <th>Manufacturer</th>
-      <th>First use date</th>
-      <th>Verify date</th>
-      <th>Company</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
+	<thead>
+		<tr>
+			<th><%= t('.code') %></th>
+			<th><%= t('.serial_no') %></th>
+			<th><%= t('.model_no') %></th>
+			<th><%= t('.manufacturer') %></th>
+			<th><%= t('.first_use_date') %></th>
+			<th><%= t('.verify_date') %></th>
+			<th><%= t('.company') %></th>
+			<th colspan="2"></th>
+		</tr>
+	</thead>
 
-  <tbody>
-    <% @devices.each do |device| %>
-      <tr>
-        <td><%= device.device_code %></td>
-        <td><%= device.serial_no %></td>
-        <td><%= device.model_no %></td>
-        <td><%= device.manufacturer %></td>
-        <td><%= device.first_use_date %></td>
-        <td><%= device.verify_date %></td>
-        <td><%= device.company.name %></td>
-        <td><%= link_to 'Edit', edit_device_path(device) %></td>
-        <td><%= link_to 'Destroy', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+	<tbody>
+		<% @devices.each do |device| %>
+			<tr>
+				<td><%= device.device_code %></td>
+				<td><%= device.serial_no %></td>
+				<td><%= device.model_no %></td>
+				<td><%= device.manufacturer %></td>
+				<td><%= device.first_use_date %></td>
+				<td><%= device.verify_date %></td>
+				<td><%= device.company.name %></td>
+				<td><%= link_to t('.edit'), edit_device_path(device) %></td>
+				<td><%= link_to t('.destroy'), device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			</tr>
+		<% end %>
+	</tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Device', new_device_path %>
+<%= link_to t('.new_device'), new_device_path %>
