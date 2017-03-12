@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 		resources :users
 		resources :devices
 		resources :companies
-		get 'lifts/index', as: 'lifts', via: :all
+		match 'lifts/index', as: 'lifts', via: :all
 #		post 'lifts/index', as: 'lifts', via: :all
 	end
 

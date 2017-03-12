@@ -41,14 +41,16 @@ zh:
       contact_number: "联系电话"
       address: "地址"
       device_count: "设备数量"
-
       device_code: "设备注册代码"
       serial_no: "出厂编号"
       model_no: "型号及参数"
       manufacturer: "制造厂家"
       first_use_date: "投入使用时间"
       verify_date: "定期检验时间"
-
+  
+  lifts:
+    index:
+      search: "查询"
 
 
   activerecord:

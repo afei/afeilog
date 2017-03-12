@@ -46,3 +46,7 @@ en:
       edit: "Edit"
       destroy: "Destroy"
       new_device: "New Device"
+
+  lifts:
+    index:
+      search: "Search"
