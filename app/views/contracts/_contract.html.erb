@@ -1,0 +1,40 @@
+<div class="panel panel-default">
+	<div class="panel-heading"><%= contract.contract_no %></div>
+	<div class="panel-body">
+		<div class="col-sm-6">
+			<div class="form-horizontal">
+				<div class="form-group">
+					<span class="col-sm-4">Start</span>
+					<span class="col-sm-8"><%= contract.contract_start %></span>
+				</div>
+				<div class="form-group">
+					<span class="col-sm-4">End</span>
+					<span class="col-sm-8"><%= contract.contract_end %></span>
+				</div>
+				<div class="form-group">
+					<span class="col-sm-4">Duty Officer</span>
+					<span class="col-sm-8"><%= contract.duty_officer %></span>
+				</div>
+				<div class="form-group">
+					<span class="col-sm-4">Fees</span>
+					<span class="col-sm-8"><%= contract.fees %></span>
+				</div>
+				<div class="form-group">
+					<span class="col-sm-4">Company</span>
+					<span class="col-sm-8"><%= contract.company.name if contract.company.name.present? %></span>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<% if !contract.payments.blank? %>
+				<table class="table">
+					<tr>
+						<th>Pay Day</th>
+						<th>Pay Amount</th>
+					</tr>
+					<%= render contract.payments %>
+				</table>
+			<% end %>
+		</div>
+	</div>
+</div>

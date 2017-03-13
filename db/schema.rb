@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170310112418) do
+ActiveRecord::Schema.define(version: 20170313122747) do
 
   create_table "baby_records", force: :cascade do |t|
     t.datetime "datetime"
@@ -31,6 +31,20 @@ ActiveRecord::Schema.define(version: 20170310112418) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
+
+  create_table "contracts", force: :cascade do |t|
+    t.string   "contract_no"
+    t.date     "contract_start"
+    t.date     "contract_end"
+    t.string   "duty_officer"
+    t.decimal  "fees",           precision: 8, scale: 2
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.integer  "company_id"
+    t.string   "company_code"
+  end
+
+  add_index "contracts", ["company_id"], name: "index_contracts_on_company_id"
 
   create_table "devices", force: :cascade do |t|
     t.string   "device_code",    null: false
@@ -53,6 +67,17 @@ ActiveRecord::Schema.define(version: 20170310112418) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "payments", force: :cascade do |t|
+    t.date     "pay_day"
+    t.decimal  "pay_amount"
+    t.string   "contract_no"
+    t.integer  "contract_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "payments", ["contract_id"], name: "index_payments_on_contract_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

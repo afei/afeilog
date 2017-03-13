@@ -24,6 +24,7 @@
 	</div>
 	<% if !company.devices.blank?  %>
 		<table class="table">
+		<tr>
 			<th><%= t('.device_code') %></th>
 			<th><%= t('.serial_no') %></th>
 			<th><%= t('.model_no') %></th>
@@ -31,6 +32,7 @@
 			<th><%= t('.first_use_date') %></th>
 			<th><%= t('.verify_date') %></th>
 			<th></th>
+		</tr>
 			<%= render company.devices %>
 		</table>
 	<% end %>
