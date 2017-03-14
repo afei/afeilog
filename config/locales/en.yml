@@ -27,6 +27,7 @@ en:
       company: "Companies"
       device: "Devices"
       contact: "Contact"
+      payment: "Payment"
       logout: "Logout"
   sessions:
     new:

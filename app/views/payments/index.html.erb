@@ -1,9 +1,11 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Listing Payments</h1>
 
-<table>
-  <thead>
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+
+<table class="table">
     <tr>
       <th>Pay day</th>
       <th>Pay amount</th>
@@ -11,21 +13,17 @@
       <th>Contract</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
 
-  <tbody>
     <% @payments.each do |payment| %>
       <tr>
         <td><%= payment.pay_day %></td>
         <td><%= payment.pay_amount %></td>
         <td><%= payment.contract_no %></td>
-        <td><%= payment.contract %></td>
-        <td><%= link_to 'Show', payment %></td>
+        <td><%= payment.contract.company.name %></td>
         <td><%= link_to 'Edit', edit_payment_path(payment) %></td>
         <td><%= link_to 'Destroy', payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-  </tbody>
 </table>
 
 <br>

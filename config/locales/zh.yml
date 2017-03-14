@@ -5,6 +5,7 @@ zh:
       company: "公司"
       device: "设备"
       contact: "合同"
+      payment: "付款信息"
       logout: "注销"
   sessions:
     new:
