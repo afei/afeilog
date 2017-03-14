@@ -1,5 +1,7 @@
 <div class="panel panel-default">
-	<div class="panel-heading"><%= contract.contract_no %></div>
+	<div class="panel-heading"><span><%= contract.contract_no %></span>
+		<span class="pull-right"><%= link_to 'Create payment', new_payment_path %></span>	
+	</div>
 	<div class="panel-body">
 		<div class="col-sm-6">
 			<div class="form-horizontal">
@@ -31,6 +33,7 @@
 					<tr>
 						<th>Pay Day</th>
 						<th>Pay Amount</th>
+						<th></th>
 					</tr>
 					<%= render contract.payments %>
 				</table>

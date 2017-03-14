@@ -46,7 +46,28 @@ en:
       edit: "Edit"
       destroy: "Destroy"
       new_device: "New Device"
+  companies:
+    edit:
+      page_title: "Edit Company"
+      back: "Back"
+    company:
+      code: "Code"
+      area: "Area"
+      contacter: "Contacter"
+      contact_number: "Contact Phone"
+      address: "Address"
+      device_count: "Device Count"
+      device_code: "Device Code"
+      serial_no: "Serial No."
+      model_no: "Model No."
+      manufacturer: "Manufacturer"
+      first_use_date: "First Use Date"
+      verify_date: "Verify Date"
+      edit: "Edit"
+      destroy: "Delete"
+      confirm: "Are you sure?"
 
   lifts:
     index:
       search: "Search"
+      create: "Create Company"

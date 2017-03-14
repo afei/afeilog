@@ -1,4 +1,4 @@
-<%= form_for(@payment) do |f| %>
+<%= form_for(@payment, html:{class: "form-horizontal"}) do |f| %>
   <% if @payment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
@@ -11,23 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :pay_day %><br>
-    <%= f.date_select :pay_day %>
+  <div class="form-group">
+    <%= f.label :pay_day, class: "col-sm-2 control-label" %>
+		<div class="col-sm-4">
+    <%= f.text_field :pay_day, class:"datepicker form-control" %>
+		</div>
   </div>
-  <div class="field">
-    <%= f.label :pay_amount %><br>
-    <%= f.text_field :pay_amount %>
+  <div class="form-group">
+    <%= f.label :pay_amount, class: "col-sm-2 control-label" %>
+		<div class="col-sm-4">
+    <%= f.text_field :pay_amount, class: "form-control" %>
+		</div>
   </div>
-  <div class="field">
-    <%= f.label :contract_no %><br>
-    <%= f.text_field :contract_no %>
+  <div class="form-group">
+    <%= f.label :contract_no, class:"col-sm-2 control-label" %>
+		<div class="col-sm-4">
+			<%= f.select :contract_no, Contract.all.collect {|c| [c.contract_no, c.contract_no]}, { prompt: 'Select a contract'}, { class: "form-control"} %>
+		</div>
   </div>
-  <div class="field">
-    <%= f.label :contract_id %><br>
-    <%= f.text_field :contract_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+		<div class="col-sm-offset-2 col-sm-4">
+    <%= f.submit 'Create Payment', class:"btn btn-default" %>
+		</div>
   </div>
 <% end %>

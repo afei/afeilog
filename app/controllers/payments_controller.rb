@@ -25,7 +25,9 @@ class PaymentsController < ApplicationController
   # POST /payments
   # POST /payments.json
   def create
+		@contract = Contract.find_by( contract_no: payment_params[:contract_no])
     @payment = Payment.new(payment_params)
+		@payment.contract_id = @contract.id
 
     respond_to do |format|
       if @payment.save
@@ -70,6 +72,6 @@ class PaymentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def payment_params
-      params.require(:payment).permit(:pay_day, :pay_amount, :contract_no, :contract_id)
+      params.require(:payment).permit(:pay_day, :pay_amount, :contract_no)
     end
 end

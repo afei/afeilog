@@ -47,10 +47,17 @@ zh:
       manufacturer: "制造厂家"
       first_use_date: "投入使用时间"
       verify_date: "定期检验时间"
+      edit: "编辑"
+      destroy: "删除"
+      confirm: "确认删除？"
+    edit:
+      page_title: "编辑公司信息"
+      back: "返回"
   
   lifts:
     index:
       search: "查询"
+      create: "创建公司"
 
 
   activerecord:

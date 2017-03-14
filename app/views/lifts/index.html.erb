@@ -5,4 +5,10 @@
 	</div>
 <% end %>
 
+<%= link_to t('.create'), new_company_path %>
+
+<% if notice %>
+	<div class="alert alert-warning"><%= notice %></div>
+<% end %>
+
 <%= render @companies %>

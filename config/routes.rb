@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :payments
-  resources :contracts
 	controller :sessions do
 		get 'login' => :new
 		post 'login' => :create
@@ -12,8 +10,9 @@ Rails.application.routes.draw do
 		resources :users
 		resources :devices
 		resources :companies
+		resources :payments
+		resources :contracts
 		match 'lifts/index', as: 'lifts', via: :all
-#		post 'lifts/index', as: 'lifts', via: :all
 	end
 
 

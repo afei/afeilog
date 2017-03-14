@@ -1,5 +1,11 @@
 <div class="panel panel-default">
-	<div class="panel-heading"><%= company.name %></div>
+	<div class="panel-heading">
+		<span><%= company.name %></span>
+		<span class="pull-right">
+			<%= link_to t('.edit'), edit_company_path(company) %> | 
+			<%= link_to t('.destroy'), company, method: :delete, data: { confirm: t('.confirm') } %>
+	</span>	
+	</div>
 	<div class="panel-body">
 		<div class="form-horizontal">
 			<div class="form-group form-group-sm">
