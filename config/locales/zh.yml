@@ -54,6 +54,27 @@ zh:
     edit:
       page_title: "编辑公司信息"
       back: "返回"
+  contracts:
+    index:
+      create: "新建合同"
+      search: "查询"
+    contract:
+      create: "新建付款"
+      edit: "编辑"
+      company: "公司名称"
+      start: "起始日期"
+      end: "终止日期"
+      officer: "维保人员"
+      fees: "金额"
+      pay_day: "付款日期"
+      pay_amount: "付款金额"
+    edit:
+      title: "编辑合同"
+      back: "返回"
+    new:
+      title: "新建合同"
+      back: "返回"
+
   
   lifts:
     index:
@@ -65,6 +86,7 @@ zh:
     models:
       device: "设备"
       company: "公司"
+      contract: "合同"
     attributes:
       device:
         device_code: "设备注册代码"
@@ -81,3 +103,11 @@ zh:
         contacter: "联系人"
         address: "地址"
         contact_number: "联系电话"
+      contract:
+        contract_no: "合同编号"
+        contract_start: "起始日期"
+        contract_end: "终止日期"
+        duty_officer: "维保人员"
+        fees: "总费用"
+        company: "公司"
+        create: "新建"

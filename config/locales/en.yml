@@ -67,6 +67,26 @@ en:
       edit: "Edit"
       destroy: "Delete"
       confirm: "Are you sure?"
+  contracts:
+    index:
+      create: "Create Contract"
+      search: "Search"
+    contract:
+      create: "Create Payment"
+      edit: "Edit"
+      company: "Company Name"
+      start: "Start Date"
+      end: "End Date"
+      officer: "Duty Officer"
+      fees: "Fees"
+      pay_day: "Pay Date"
+      pay_amount: "Pay Amount"
+    edit:
+      title: "Editing Contract"
+      back: "Back"
+    new:
+      title: "Create Contract"
+      back: "Back"
 
   lifts:
     index:

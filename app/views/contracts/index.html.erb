@@ -1,10 +1,10 @@
 <%= form_tag contracts_path,  method: :get ,  class: 'form-inline'  do %>
 	<div class="form-group">
 	<%= text_field_tag :search, params[:search], { class: 'form-control monthpicker' } %>
-	<%= submit_tag 'search', name: nil, class: 'btn btn-default' %>
+	<%= submit_tag t('.search'), name: nil, class: 'btn btn-default' %>
 	</div>
 <% end %>
 
-<%= link_to 'Create Contract', new_contract_path %>
+<%= link_to t('.create'), new_contract_path %>
 
 <%= render @contracts %>
