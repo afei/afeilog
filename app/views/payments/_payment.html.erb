@@ -1,5 +1,6 @@
 		<tr>
 		<td><%= payment.pay_day %></td>
 		<td><%= payment.pay_amount %></td>
-		<td><%= link_to 'Edit', edit_payment_path(payment) %></td>
+		<td><%= link_to t('.edit'), edit_payment_path(payment) %> | 
+			<%= link_to t('.check'), payment_path(payment) %></td>
 		</tr>

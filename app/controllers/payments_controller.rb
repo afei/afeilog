@@ -5,7 +5,12 @@ class PaymentsController < ApplicationController
   # GET /payments
   # GET /payments.json
   def index
-    @payments = Payment.all
+		if params[:search].present?
+			pay_day = Date.parse params[:search]
+			@payments = Payment.expired( pay_day)
+		else
+			@payments = Payment.all
+		end
   end
 
   # GET /payments/1

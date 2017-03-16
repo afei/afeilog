@@ -10,5 +10,5 @@ class Device < ActiveRecord::Base
 		end_date = verify_date.end_of_month
 		where verify_date: first_date..end_date
 	end
-	scope :expired, -> (verify_date) { where( 'verify_date < ?',  verify_date.end_of_month )}
+	scope :expired, -> (verify_date) { where( 'verify_date <= ?',  verify_date.end_of_month )}
 end

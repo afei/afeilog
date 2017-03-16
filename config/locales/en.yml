@@ -87,6 +87,22 @@ en:
     new:
       title: "Create Contract"
       back: "Back"
+  payments:
+    edit:
+      title: "Editing Payment"
+      back: "Back"
+    payment:
+      edit: "Edit"
+    index:
+      pay_day: "Pay Day"
+      pay_amount: "Pay Amount"
+      contract_no: "Contract No"
+      company: "Company Name"
+      edit: "Edit"
+      destroy: "Destroy"
+      title: "Search"
+      create: "New Payment"
+      
 
   lifts:
     index:

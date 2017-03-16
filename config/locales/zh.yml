@@ -25,8 +25,6 @@ zh:
       edit: "编辑"
       destroy: "删除"
       new_device: "新建"
-    form:
-      create_device: "创建设备"
     new:
       new_device: "新建设备"
       back: "返回"
@@ -74,6 +72,22 @@ zh:
     new:
       title: "新建合同"
       back: "返回"
+  payments:
+    edit:
+      title: "编辑付款信息"
+      back: "返回"
+    payment:
+      edit: "编辑"
+      check: "收款"
+    index:
+      pay_day: "付款日期"
+      pay_amount: "付款金额"
+      contract_no: "合同编号"
+      company: "公司名称"
+      edit: "编辑"
+      destroy: "删除"
+      search: "查询"
+      create: "新建付款"
 
   
   lifts:
@@ -87,6 +101,7 @@ zh:
       device: "设备"
       company: "公司"
       contract: "合同"
+      payment: "付款"
     attributes:
       device:
         device_code: "设备注册代码"
@@ -111,3 +126,7 @@ zh:
         fees: "总费用"
         company: "公司"
         create: "新建"
+      payment:
+        pay_day: "付款日期"
+        pay_amount: "付款金额"
+        contract_no: "合同编号"
