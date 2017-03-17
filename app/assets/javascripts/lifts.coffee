@@ -4,8 +4,8 @@
 
 $ ->
   $('.monthpicker').datepicker
-    startView: 1, minViewMode: 1, autoclose: true, format: "yyyy-mm-dd" 
+    startView: 1, minViewMode: 1, autoclose: true, format: "yyyy-mm-dd", language: "zh-CN" 
 
   $('.datepicker').datepicker
-    startView: 0, minViewMode: 0, autoclose: true, format: "yyyy-mm-dd" 
+    startView: 0, minViewMode: 0, autoclose: true, format: "yyyy-mm-dd", language: "zh-CN"
 
