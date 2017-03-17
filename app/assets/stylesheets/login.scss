@@ -1,13 +1,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body{
+	background-color: #eee;
+}
+
+#login{
+	padding-top: 100px;
+	padding-bottom: 60px;
+}
+
 .form-signin{
 	max-width: 330px;
 	padding: 15px;
 	margin: 0 auto;
 }
 
-.form-signin .form-signin-heading{
+.form-signin .form-signin-heading input {
 	margin-bottom: 10px;
 }
 
