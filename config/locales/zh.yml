@@ -9,8 +9,9 @@ zh:
       logout: "注销"
   sessions:
     new:
-      name: "用户名:"
-      password: "密码:"
+      title: "登陆"
+      name: "用户名"
+      password: "密码"
       login: "登陆"
   devices:
     index:

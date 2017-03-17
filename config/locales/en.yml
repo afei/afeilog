@@ -31,8 +31,9 @@ en:
       logout: "Logout"
   sessions:
     new:
-      name: "Name:"
-      password: "Password:"
+      title: "Sign in"
+      name: "User Name"
+      password: "Password"
       login: "Login"
   devices:
     index:
