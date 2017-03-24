@@ -5,6 +5,9 @@ class AfeilController < ApplicationController
 
 	def html5
 	end
+
+	def about
+	end
 	
 	def qbaby
 		#@babyrecords = BabyRecord.order(datetime: :desc, record_time: :desc)

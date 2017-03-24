@@ -26,6 +26,7 @@ Rails.application.routes.draw do
 
 	get 'afeil/html5' => 'afeil#html5'
 	get 'afeil/index' => 'afeil#index'
+	get 'afeil/about' => 'afeil#about'
 	get 'baby/new' => 'afeil#new'
 	post 'baby/new' => 'afeil#create'
 	get 'baby/index' => 'afeil#qbaby'
