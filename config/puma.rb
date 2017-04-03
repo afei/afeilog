@@ -8,8 +8,8 @@ workers 1
 
 # application name, application path
 app_name = "afeilog"
-application_path = "/home/afeil/ror/afeilog"
-#application_path = "/Users/ichr/Rails/afeilog"
+#application_path = "/home/afeil/ror/afeilog"
+application_path = "/Users/ichr/Rails/afeilog"
 directory "#{application_path}"
 
 # puma configration
