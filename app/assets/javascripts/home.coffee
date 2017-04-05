@@ -2,5 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$("ul.blog-nav > a").click -> 
-	alert("click")
+$ -> 
+#  $("ul.blog-nav a").click -> 
+#	  $("ul.blog-nav a").removeClass("active")
+
+

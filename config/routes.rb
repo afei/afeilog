@@ -24,9 +24,9 @@ Rails.application.routes.draw do
 	# The priority is based upon order of creation: first created -> highest priority.
 	# See how all your routes lay out with "rake routes".
 
-	get 'afeil/html5' => 'afeil#html5'
-	get 'afeil/index' => 'afeil#index'
-	get 'afeil/about' => 'afeil#about'
+	get 'home' => 'afeil#html5', as: :home
+	get 'blog' => 'afeil#index', as: :blog
+	get 'about' => 'afeil#about', as: :about
 	get 'baby/new' => 'afeil#new'
 	post 'baby/new' => 'afeil#create'
 	get 'baby/index' => 'afeil#qbaby'
