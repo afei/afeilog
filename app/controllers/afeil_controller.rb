@@ -1,5 +1,6 @@
 class AfeilController < ApplicationController
 	skip_before_action :authorize
+	skip_before_action :default_url_options
 	def index
 	end
 
