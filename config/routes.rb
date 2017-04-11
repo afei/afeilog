@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :blogs
+  resources :blogs
 	controller :sessions do
 		get 'login' => :new
 		post 'login' => :create
@@ -25,7 +27,7 @@ Rails.application.routes.draw do
 	# See how all your routes lay out with "rake routes".
 
 	get 'home' => 'afeil#html5', as: :home
-	get 'blog' => 'afeil#index', as: :blog
+	get 'afeil/index' => 'afeil#index'
 	get 'about' => 'afeil#about', as: :about
 	get 'baby/new' => 'afeil#new'
 	post 'baby/new' => 'afeil#create'
